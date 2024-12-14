@@ -1,0 +1,14 @@
+#number{
+    display: block;
+    text-align: center;
+    font-size: 5rem;
+    padding: 5;
+}
+
+#buttons {
+    text-align: center;
+}
+
+button{
+    min-width: 8rem;
+}
