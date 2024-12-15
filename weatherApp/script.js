@@ -8,21 +8,20 @@ let pressure = document.getElementById("pressure");
 let form = document.getElementById("inputForm");
 let main = document.querySelector('main')
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {        //event handeler
     event.preventDefault()
     if (searchInput.value != "") {
         searchWeather();
     }
 })
 let id = "5713576368d7d910197dfccf2efcfefa"
-function searchWeather() {
+function searchWeather() {                          //searches for url and picks information 
 
-    let url = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInput.value + ',&APPID=' + id+'&units=metric';
+    let url = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInput.value + ',&APPID=' + id + '&units=metric';
 
     fetch(url)
         .then(responsive => responsive.json())
         .then(data => {
-            console.log(data);
             if (data.cod == 200) {
                 city.querySelector("figcaption").innerText = data.name;
                 city.querySelector("img").src = "https://flagsapi.com/" + data.sys.country + "/shiny/32.png"
@@ -33,17 +32,16 @@ function searchWeather() {
                 humidity.innerText = data.main.humidity;
                 pressure.innerText = data.main.pressure;
             } else {
-                //false
-                main.classList.add('error')
+                main.classList.add('error')         //adds animation for bad input
                 setTimeout(() => {
                     main.classList.remove('error')
-                }, 1000);
+                }, 250);
             }
 
-            searchInput.value = '';
+            searchInput.value = '';                 //clears input
         })
 }
-function initApp() {
+function initApp() {                                //inniciate search when application loads
     searchInput.value = 'Praha';
     searchWeather();
 }
