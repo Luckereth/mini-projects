@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vytvoření pojištěnce</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/512/2237/2237792.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/InsuredPerson.js"></script>
+    <script src="/js/storage.js" defer></script>
+    <script src="/js/validation.js" defer></script>
+    <script src="/js/registerNewInsuredPerson.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <h1>Pojištění<span>app</span></h1>
+        </div>
+        <nav>
+            <a href="app.html">Vytvoření pojištěnce</a>
+            <a href="seznam-pojistencu.html">Seznam pojištěnců</a>
+        </nav>
+    </header>
+
+    <section class="newInsured">
+        <h2>Nový pojištěnec</h2>
+        <img src="/resources/avatar.jpg" alt="Uživatel" id="avatar">
+        <form>
+            <div>
+                <p>Jméno:</p>
+                <input type="text" id="firstName" placeholder="Lukáš" required>
+                <p>Věk:</p>
+                <input type="number" id="age" placeholder="28" required>
+            </div>
+            <div>
+                <p>Přijmení:</p>
+                <input type="text" id="lastName" placeholder="Hlavinka" required>
+                <p>Telefon:</p>
+                <input type="text" id="phone" placeholder="+420778204006" required>
+            </div>
+            <div style="text-align: center; width: 100%;">
+                <button type="submit" id="saveBtn">Uložit</button>
+            </div>
+        </form>
+    </section>
+
+    </article>
+
+</body>
+</html>

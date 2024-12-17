@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    background-color: #0068d8;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    padding: 1rem;
+}
+
+header nav a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.newInsured, .seznam {
+    max-width: 60%;
+    margin: auto;
+    padding: 1rem;
+    animation: slide-in 0.5s ease forwards;
+}
+
+
+table img {
+    width: 25px;
+}
+
+#avatar {
+    margin: 2rem;
+    float: left;
+    border: 1px solid black;
+    width: 12rem;
+    border-radius: 2rem;
+}
+
+#logo {
+    background: #0068d8;
+    height: 40px;
+    display: flex;
+}
+
+#logo h1 {
+    font-weight: normal;
+    font-size: 1.5em;
+    color: white
+}
+
+#logo h1 span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#saveBtn {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 1rem;
+    margin: auto;
+    transition: background-color 0.3s;
+}
+
+#saveBtn:hover {
+    background-color: #0063ce;
+}
+
+input {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #3d3d3d;
+    border-radius: 1rem;
+    font-size: 1rem;
+    max-width: 90%;
+}
+
+input:hover {
+    background-color: #007bff34;
+    transition: background-color 0.5s;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    font-weight: bold;
+    background-color: #007bffd2;
+}
+
+table td {
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    background-color: #00000053;
+}
+
+/* Klíčové snímky pro animaci načítání */
+@keyframes slide-in {
+    from {
+        transform: translateX(-50rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Třída pro aplikaci animace mazání */
+.slide-out {
+    animation: slide-out 0.5s ease forwards;
+    /* Aplikování animace pro mazání */
+}
+
+/* Klíčové snímky pro animaci mazání */
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-50rem);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newInsured {
+        max-width: 100%;
+    }
+
+    .seznam {
+        max-width: 100%;
+    }
+
+    #avatar {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 0.8rem;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #saveBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #avatar {
+        width: 100%;
+    }
+
+    input {
+        padding: 1rem;
+    }
+
+    #saveBtn {
+        padding: 0.8rem;
+    }
+}

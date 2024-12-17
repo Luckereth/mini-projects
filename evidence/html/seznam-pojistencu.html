@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seznam pojištěnců</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/512/2237/2237792.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="/js/storage.js" defer></script>
+    <script src="/js/insuredList.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <div id="logo">
+            <h1>Pojištění<span>app</span></h1>
+        </div>
+        <nav>
+            <a href="app.html">Vytvoření pojištěnce</a>
+            <a href="seznam-pojistencu.html">Seznam pojištěnců</a>
+        </nav>
+    </header>
+
+    <section class="seznam">
+        <h2>Pojistěnci</h2>
+        <table border="1" id="seznam" class="animate">
+            <thead>
+                <tr>
+                    <th style="width: 60%;">Jméno a příjmení</th>
+                    <th style="width: 20%;">Telefon</th>
+                    <th style="width: 10%;">Věk</th>
+                    <th style="width: 10%;">Smazat</th>
+                </tr>
+            </thead>
+            <tbody id="newInsured"></tbody>
+        </table>
+    </section>
+
+    </article>
+
+
+
+</body>
+</html>
